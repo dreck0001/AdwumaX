@@ -28,16 +28,7 @@ struct AuthenticationView: View {
                     .padding(.horizontal) // Ensure it has space on the sides if needed
                     .padding(.bottom)
                 VStack(spacing: 20) {
-                    if isSignIn {
-                        NavigationLink(destination: EmailSignInView(showSignInOptions: $showSignInView)) {
-                            ClearButton(imageName: "envelope", buttonText: "\(signInSignUpText)Email", isSysName: true)
-                        }
-                    }
-                    else {
-                        NavigationLink(destination: EmailSignUpView(showSignInOptions: $showSignInView)) {
-                            ClearButton(imageName: "envelope", buttonText: "\(signInSignUpText)Email", isSysName: true)
-                        }
-                    }
+                    
                     Button(action: {
                         Task {
                             do {
@@ -62,6 +53,17 @@ struct AuthenticationView: View {
                         }
                     }) {
                         ClearButton(imageName: "apple.logo", buttonText: "\(signInSignUpText)Apple", isSysName: true)
+                    }
+                    
+                    if isSignIn {
+                        NavigationLink(destination: EmailSignInView(showSignInOptions: $showSignInView)) {
+                            ClearButton(imageName: "envelope", buttonText: "\(signInSignUpText)Email", isSysName: true)
+                        }
+                    }
+                    else {
+                        NavigationLink(destination: EmailSignUpView(showSignInOptions: $showSignInView)) {
+                            ClearButton(imageName: "envelope", buttonText: "\(signInSignUpText)Email", isSysName: true)
+                        }
                     }
                     
                     
@@ -120,6 +122,10 @@ struct AuthenticationView: View {
             }
         }
     }
+}
+
+#Preview {
+    AuthenticationView(showSignInView: .constant(false))
 }
 
 struct SignInSignUpToggleView: View {
@@ -182,6 +188,4 @@ struct AgreementTextView: View {
     }
 }
 
-#Preview {
-    AuthenticationView(showSignInView: .constant(false))
-}
+

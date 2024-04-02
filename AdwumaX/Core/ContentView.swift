@@ -12,13 +12,12 @@ struct ContentView: View {
     @State private var showSignInOptions: Bool = false
     
     var body: some View {
-        TabView {
+        TabView(selection: .constant(0)) {
             HomeView()
             NetworkView()
             ProjectsView()
 //            MessagesView()
             ProductsView()
-
             ProfileView(showSignInOptions: $showSignInOptions)
         }
         .accentColor(.primaryBlueGreen) // Change the accent color to red

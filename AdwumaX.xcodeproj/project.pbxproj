@@ -275,7 +275,6 @@
 			isa = PBXGroup;
 			children = (
 				92111F752BBBE14C0045638C /* Authentication */,
-				92111F792BBBE14C0045638C /* Products */,
 				92111F7C2BBBE14C0045638C /* Settings */,
 				92111F812BBBE14C0045638C /* Subviews */,
 				92111F822BBBE14C0045638C /* ContentView.swift */,
@@ -284,6 +283,7 @@
 				92111F852BBBE14C0045638C /* NetworkView.swift */,
 				92111F862BBBE14C0045638C /* ProfileView.swift */,
 				92111F872BBBE14C0045638C /* ProjectsView.swift */,
+				92111F792BBBE14C0045638C /* Products */,
 			);
 			path = Core;
 			sourceTree = "<group>";
