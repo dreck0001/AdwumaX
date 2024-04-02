@@ -1,0 +1,7 @@
+# Created by denis, 03/31/2024 #
+
+# plists #
+*.plist
+
+# entitlements #
+*.entitlements
