@@ -16,7 +16,7 @@ struct AdwumaXApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashView()
         }
     }
 }
