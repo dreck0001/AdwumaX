@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		92111F342BBBD2990045638C /* AdwumaXApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92111F332BBBD2990045638C /* AdwumaXApp.swift */; };
+		92111F362BBBD2990045638C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92111F352BBBD2990045638C /* ContentView.swift */; };
+		92111F382BBBD29B0045638C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92111F372BBBD29B0045638C /* Assets.xcassets */; };
+		92111F3B2BBBD29B0045638C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92111F3A2BBBD29B0045638C /* Preview Assets.xcassets */; };
+		92111F452BBBD29C0045638C /* AdwumaXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92111F442BBBD29C0045638C /* AdwumaXTests.swift */; };
+		92111F4F2BBBD29C0045638C /* AdwumaXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92111F4E2BBBD29C0045638C /* AdwumaXUITests.swift */; };
+		92111F512BBBD29C0045638C /* AdwumaXUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92111F502BBBD29C0045638C /* AdwumaXUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92111F412BBBD29B0045638C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92111F282BBBD2990045638C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92111F2F2BBBD2990045638C;
+			remoteInfo = AdwumaX;
+		};
+		92111F4B2BBBD29C0045638C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92111F282BBBD2990045638C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92111F2F2BBBD2990045638C;
+			remoteInfo = AdwumaX;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		92111F302BBBD2990045638C /* AdwumaX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdwumaX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92111F332BBBD2990045638C /* AdwumaXApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdwumaXApp.swift; sourceTree = "<group>"; };
+		92111F352BBBD2990045638C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		92111F372BBBD29B0045638C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92111F3A2BBBD29B0045638C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		92111F402BBBD29B0045638C /* AdwumaXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdwumaXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92111F442BBBD29C0045638C /* AdwumaXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdwumaXTests.swift; sourceTree = "<group>"; };
+		92111F4A2BBBD29C0045638C /* AdwumaXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdwumaXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92111F4E2BBBD29C0045638C /* AdwumaXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdwumaXUITests.swift; sourceTree = "<group>"; };
+		92111F502BBBD29C0045638C /* AdwumaXUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdwumaXUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92111F2D2BBBD2990045638C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92111F3D2BBBD29B0045638C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92111F472BBBD29C0045638C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		92111F272BBBD2990045638C = {
+			isa = PBXGroup;
+			children = (
+				92111F322BBBD2990045638C /* AdwumaX */,
+				92111F432BBBD29C0045638C /* AdwumaXTests */,
+				92111F4D2BBBD29C0045638C /* AdwumaXUITests */,
+				92111F312BBBD2990045638C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		92111F312BBBD2990045638C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92111F302BBBD2990045638C /* AdwumaX.app */,
+				92111F402BBBD29B0045638C /* AdwumaXTests.xctest */,
+				92111F4A2BBBD29C0045638C /* AdwumaXUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92111F322BBBD2990045638C /* AdwumaX */ = {
+			isa = PBXGroup;
+			children = (
+				92111F332BBBD2990045638C /* AdwumaXApp.swift */,
+				92111F352BBBD2990045638C /* ContentView.swift */,
+				92111F372BBBD29B0045638C /* Assets.xcassets */,
+				92111F392BBBD29B0045638C /* Preview Content */,
+			);
+			path = AdwumaX;
+			sourceTree = "<group>";
+		};
+		92111F392BBBD29B0045638C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				92111F3A2BBBD29B0045638C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		92111F432BBBD29C0045638C /* AdwumaXTests */ = {
+			isa = PBXGroup;
+			children = (
+				92111F442BBBD29C0045638C /* AdwumaXTests.swift */,
+			);
+			path = AdwumaXTests;
+			sourceTree = "<group>";
+		};
+		92111F4D2BBBD29C0045638C /* AdwumaXUITests */ = {
+			isa = PBXGroup;
+			children = (
+				92111F4E2BBBD29C0045638C /* AdwumaXUITests.swift */,
+				92111F502BBBD29C0045638C /* AdwumaXUITestsLaunchTests.swift */,
+			);
+			path = AdwumaXUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		92111F2F2BBBD2990045638C /* AdwumaX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92111F542BBBD29C0045638C /* Build configuration list for PBXNativeTarget "AdwumaX" */;
+			buildPhases = (
+				92111F2C2BBBD2990045638C /* Sources */,
+				92111F2D2BBBD2990045638C /* Frameworks */,
+				92111F2E2BBBD2990045638C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AdwumaX;
+			productName = AdwumaX;
+			productReference = 92111F302BBBD2990045638C /* AdwumaX.app */;
+			productType = "com.apple.product-type.application";
+		};
+		92111F3F2BBBD29B0045638C /* AdwumaXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92111F572BBBD29C0045638C /* Build configuration list for PBXNativeTarget "AdwumaXTests" */;
+			buildPhases = (
+				92111F3C2BBBD29B0045638C /* Sources */,
+				92111F3D2BBBD29B0045638C /* Frameworks */,
+				92111F3E2BBBD29B0045638C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92111F422BBBD29B0045638C /* PBXTargetDependency */,
+			);
+			name = AdwumaXTests;
+			productName = AdwumaXTests;
+			productReference = 92111F402BBBD29B0045638C /* AdwumaXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		92111F492BBBD29C0045638C /* AdwumaXUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92111F5A2BBBD29C0045638C /* Build configuration list for PBXNativeTarget "AdwumaXUITests" */;
+			buildPhases = (
+				92111F462BBBD29C0045638C /* Sources */,
+				92111F472BBBD29C0045638C /* Frameworks */,
+				92111F482BBBD29C0045638C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92111F4C2BBBD29C0045638C /* PBXTargetDependency */,
+			);
+			name = AdwumaXUITests;
+			productName = AdwumaXUITests;
+			productReference = 92111F4A2BBBD29C0045638C /* AdwumaXUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		92111F282BBBD2990045638C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					92111F2F2BBBD2990045638C = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					92111F3F2BBBD29B0045638C = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 92111F2F2BBBD2990045638C;
+					};
+					92111F492BBBD29C0045638C = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 92111F2F2BBBD2990045638C;
+					};
+				};
+			};
+			buildConfigurationList = 92111F2B2BBBD2990045638C /* Build configuration list for PBXProject "AdwumaX" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 92111F272BBBD2990045638C;
+			productRefGroup = 92111F312BBBD2990045638C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				92111F2F2BBBD2990045638C /* AdwumaX */,
+				92111F3F2BBBD29B0045638C /* AdwumaXTests */,
+				92111F492BBBD29C0045638C /* AdwumaXUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92111F2E2BBBD2990045638C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92111F3B2BBBD29B0045638C /* Preview Assets.xcassets in Resources */,
+				92111F382BBBD29B0045638C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92111F3E2BBBD29B0045638C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92111F482BBBD29C0045638C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92111F2C2BBBD2990045638C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92111F362BBBD2990045638C /* ContentView.swift in Sources */,
+				92111F342BBBD2990045638C /* AdwumaXApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92111F3C2BBBD29B0045638C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92111F452BBBD29C0045638C /* AdwumaXTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92111F462BBBD29C0045638C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92111F512BBBD29C0045638C /* AdwumaXUITestsLaunchTests.swift in Sources */,
+				92111F4F2BBBD29C0045638C /* AdwumaXUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		92111F422BBBD29B0045638C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92111F2F2BBBD2990045638C /* AdwumaX */;
+			targetProxy = 92111F412BBBD29B0045638C /* PBXContainerItemProxy */;
+		};
+		92111F4C2BBBD29C0045638C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92111F2F2BBBD2990045638C /* AdwumaX */;
+			targetProxy = 92111F4B2BBBD29C0045638C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		92111F522BBBD29C0045638C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		92111F532BBBD29C0045638C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		92111F552BBBD29C0045638C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AdwumaX/Preview Content\"";
+				DEVELOPMENT_TEAM = QB2T369883;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AdwumaX.AdwumaX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		92111F562BBBD29C0045638C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AdwumaX/Preview Content\"";
+				DEVELOPMENT_TEAM = QB2T369883;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AdwumaX.AdwumaX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		92111F582BBBD29C0045638C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QB2T369883;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AdwumaX.AdwumaXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AdwumaX.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AdwumaX";
+			};
+			name = Debug;
+		};
+		92111F592BBBD29C0045638C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QB2T369883;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AdwumaX.AdwumaXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AdwumaX.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AdwumaX";
+			};
+			name = Release;
+		};
+		92111F5B2BBBD29C0045638C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QB2T369883;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AdwumaX.AdwumaXUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AdwumaX;
+			};
+			name = Debug;
+		};
+		92111F5C2BBBD29C0045638C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QB2T369883;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AdwumaX.AdwumaXUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AdwumaX;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		92111F2B2BBBD2990045638C /* Build configuration list for PBXProject "AdwumaX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92111F522BBBD29C0045638C /* Debug */,
+				92111F532BBBD29C0045638C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92111F542BBBD29C0045638C /* Build configuration list for PBXNativeTarget "AdwumaX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92111F552BBBD29C0045638C /* Debug */,
+				92111F562BBBD29C0045638C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92111F572BBBD29C0045638C /* Build configuration list for PBXNativeTarget "AdwumaXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92111F582BBBD29C0045638C /* Debug */,
+				92111F592BBBD29C0045638C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92111F5A2BBBD29C0045638C /* Build configuration list for PBXNativeTarget "AdwumaXUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92111F5B2BBBD29C0045638C /* Debug */,
+				92111F5C2BBBD29C0045638C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 92111F282BBBD2990045638C /* Project object */;
+}
