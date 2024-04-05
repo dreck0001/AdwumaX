@@ -56,6 +56,7 @@ final class AuthenticationManager {
     }
     
     func signOut() throws {
+        UserDefaults.standard.set(true, forKey: "hasSeenOnboarding")
         try Auth.auth().signOut()
     }
     
@@ -70,7 +71,7 @@ final class AuthenticationManager {
 // MARK: SIGN IN EMAIL
 extension AuthenticationManager {
     @discardableResult
-    func createUser(email: String, password: String) async throws -> AuthDataResultModel{
+    func createUser(email: String, password: String) async throws -> AuthDataResultModel {
         let authDataResult = try await Auth.auth().createUser(withEmail: email, password: password)
         return AuthDataResultModel(user: authDataResult.user)
     }

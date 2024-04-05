@@ -10,7 +10,8 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var showSignInOptions: Bool = false
-    
+    @State private var showOnboarding: Bool = false
+    @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding: Bool = false
     var body: some View {
         TabView(selection: .constant(0)) {
             HomeView()
@@ -20,7 +21,7 @@ struct ContentView: View {
             ProductsView()
             ProfileView(showSignInOptions: $showSignInOptions)
         }
-        .accentColor(.primaryBlueGreen) // Change the accent color to red
+        .accentColor(.primaryBlueGreen)
         .onAppear(perform: {
             let authuser = try? AuthenticationManager.shared.getAuthenticatedUser()
             self.showSignInOptions = authuser == nil
@@ -31,6 +32,12 @@ struct ContentView: View {
         .fullScreenCover(isPresented: $showSignInOptions, content: {
             AuthenticationView(showSignInView: $showSignInOptions)
         })
+        .fullScreenCover(isPresented: $showOnboarding) {
+            OnboardingView(isShowingOnboarding: $showOnboarding)
+        }
+        .onAppear {
+            showOnboarding = !hasSeenOnboarding
+        }
     }
 }
 

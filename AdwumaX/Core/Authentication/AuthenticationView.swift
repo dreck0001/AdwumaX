@@ -66,45 +66,6 @@ struct AuthenticationView: View {
                         }
                     }
                     
-                    
-//                    if isSignIn {
-//                        NavigationLink(destination: xSignInView()) {
-//                            ClearButton(imageName: colorScheme == .dark ? "x_dark" : "x_light", buttonText: "Sign in with X")
-//                        }
-//                        .transition(.opacity) // Specify the transition effect
-//                    }
-//                    NavigationLink(destination: AppleSignUpView()) {
-//                        ClearButton(imageName: "facebook", buttonText: "\(signInSignUpText)Facebook")
-//                    }
-                    
-                    
-                    
-                    
-//                    GoogleSignInButton(viewModel: GoogleSignInButtonViewModel(scheme: .dark, style: .wide, state: .normal)) {
-//                        Task {
-//                            do {
-//                                try await viewModel.signInGoogle()
-//                                showSignInView = false
-//                            } catch {
-//                                print(error)
-//                            }
-//                        }
-//                    }
-//                    Button(action: {
-//                        Task {
-//                            do {
-//                                try await viewModel.signInApple()
-//                                showSignInView = false
-//                            } catch {
-//                                print(error)
-//                            }
-//                        }
-//                    }, label: {
-//                        SignInWithAppleButtonViewRepresentable(type: .default, style: .black)
-//                            .allowsHitTesting(false)
-//                    })
-//                    .frame(height: 40)
-                    
                     Spacer()
                     
                     SignInSignUpToggleView(isSignIn: $isSignIn)

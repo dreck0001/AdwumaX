@@ -18,7 +18,7 @@ enum Menu: String {
 }
 
 extension Color {
-    static let primaryBlueGreen = Color(red: 50 / 255, green: 186 / 255, blue: 174 / 255)
+    static let primaryBlueGreen = Color(red: 50 / 255, green: 186 / 255, blue: 174 / 255) //#32baae
     static let primaryRed = Color(.red)
     static let primaryBlueGreen2 = UIColor(Color(#colorLiteral(red: 0.1960784314, green: 0.7294117647, blue: 0.6823529412, alpha: 0.04)))
     static let primaryBlueGreen3 = Color(#colorLiteral(red: 0.1960784314, green: 0.7294117647, blue: 0.6823529412, alpha: 0.04))

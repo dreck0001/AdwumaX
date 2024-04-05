@@ -35,12 +35,7 @@ struct EmailSignInView: View {
                             }
                         }
                     }) {
-                    Text("Sign In")
-                        .foregroundColor(.white)
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .bold()
-                        .background(RoundedRectangle(cornerRadius: 10).fill(Color.primaryBlueGreen))
+                        Text("Sign In").button1()
                     }
                 }
                 .padding()
