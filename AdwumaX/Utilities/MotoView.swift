@@ -14,7 +14,7 @@ struct MotoView: View {
             Spacer()
             Group {
                 Text("Taking Adwuma to the") +
-                Text(" MAX!").foregroundColor(Color.primaryBlueGreen)
+                Text(" MAX!").foregroundColor(Color.primary1)
             }
             .multilineTextAlignment(.center)
             .font(.custom("Baskerville", fixedSize: CGFloat(Consts.Icon.fontSize)))

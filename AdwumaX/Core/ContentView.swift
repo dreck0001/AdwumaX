@@ -13,15 +13,18 @@ struct ContentView: View {
     @State private var showOnboarding: Bool = false
     @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding: Bool = false
     var body: some View {
-        TabView(selection: .constant(0)) {
+        TabView() {
             HomeView()
-            NetworkView()
-            ProjectsView()
+//            NetworkView()
+//            ProjectsView()
 //            MessagesView()
             ProductsView()
             ProfileView(showSignInOptions: $showSignInOptions)
+            ProfileVieww(showSignInOptions: $showSignInOptions, viewModel: ProfilViewwModel())
+            Spinner()
+//            PhoneNumberView()
         }
-        .accentColor(.primaryBlueGreen)
+        .accentColor(.primary1)
         .onAppear(perform: {
             let authuser = try? AuthenticationManager.shared.getAuthenticatedUser()
             self.showSignInOptions = authuser == nil

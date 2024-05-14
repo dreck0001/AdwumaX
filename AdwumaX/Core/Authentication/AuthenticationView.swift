@@ -100,7 +100,7 @@ struct SignInSignUpToggleView: View {
                 }
             }) {
                 Text(isSignIn ? "Sign up." : "Sign in.")
-                    .foregroundColor(Color.primaryBlueGreen)
+                    .foregroundColor(Color.primary1)
             }
         }
         .scaleEffect(0.9)
@@ -116,7 +116,7 @@ struct ForgotHelpView: View {
             Button("Get help.") {
                 showHelpView = true
             }
-            .foregroundStyle(Color.primaryBlueGreen) // Style as needed
+            .foregroundStyle(Color.primary1) // Style as needed
             .sheet(isPresented: $showHelpView) {
                 GetHelpView() // Present the HelpView modally
             }

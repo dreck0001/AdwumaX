@@ -98,7 +98,7 @@ struct CustomTabs: View {
                                     if selectedTabIndex == index {
                                         Rectangle()
 //                                            .fill(colorScheme == .dark ? Color.white : Color.black)
-                                            .fill(Color.primaryBlueGreen)
+                                            .fill(Color.primary1)
                                             .frame(height: 2)
                                             .matchedGeometryEffect(id: "underline", in: namespace)
                                     } else {

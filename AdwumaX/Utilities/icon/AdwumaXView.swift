@@ -21,7 +21,7 @@ struct AdwumaXView: View {
         HStack(spacing: 0) {
             Text(text1)
             Text(text2)
-                .foregroundColor(Color.primaryBlueGreen)
+                .foregroundColor(Color.primary1)
         }
         .font(.custom(Consts.Title.fontName, fixedSize: size))
         .font(.largeTitle)

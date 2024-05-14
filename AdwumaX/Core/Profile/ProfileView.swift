@@ -83,7 +83,7 @@ struct ProfileView: View {
                 .padding(.trailing).padding(.top)
                 
             }
-            Divider().background(Color.primaryBlueGreen)
+            Divider().background(Color.primary1)
             List {
                 if let user = viewModel.user {
                     Text("UserId: \(user.userId)")
@@ -128,13 +128,6 @@ struct ProfileView: View {
             .task {
                 try? await viewModel.loadCUrrentUser()
             }
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    
-                }
-            }
-            
-            
         }
         .tabItem {
             Label("Profile", systemImage: "person")

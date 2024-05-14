@@ -15,6 +15,21 @@ struct Movie: Codable {
     let isPopular: Bool
 }
 
+struct Phone: Codable {
+    let id: String
+    let number: String
+    let countryCode: String
+    let countryFlag: String
+    let countryPattern: String
+    let countryLimit: Int
+}
+
+struct Location: Codable {
+    let id: String
+    let location: String
+    let allowLocationEntry: Bool
+}
+
 struct DBUser: Codable {
     let userId: String
     let email: String?
@@ -23,6 +38,8 @@ struct DBUser: Codable {
     let isPremium: Bool?
     let preferences: [String]?
     let favoriteMovie: Movie?
+    let phone: Phone?
+    let userLocation: Location?
 
     init(auth: AuthDataResultModel) {
         self.userId = auth.uid
@@ -32,6 +49,8 @@ struct DBUser: Codable {
         self.isPremium = false
         self.preferences = nil
         self.favoriteMovie = nil
+        self.phone = nil
+        self.userLocation = nil
     }
     
     init(
@@ -41,7 +60,9 @@ struct DBUser: Codable {
         dateCreated: Date? = nil,
         isPremium: Bool? = nil,
         preferences: [String]? = nil,
-        favoriteMovie: Movie? = nil
+        favoriteMovie: Movie? = nil,
+        phone: Phone? = nil,
+        userLocation: Location? = nil
     ) {
         self.userId = userId
         self.email = email
@@ -50,6 +71,8 @@ struct DBUser: Codable {
         self.isPremium = isPremium
         self.preferences = preferences
         self.favoriteMovie = favoriteMovie
+        self.phone = phone
+        self.userLocation = userLocation
     }
     
 //    mutating func togglePremiumStatus() {
@@ -64,6 +87,8 @@ struct DBUser: Codable {
         case isPremium = "user_isPremium"
         case preferences = "preferences"
         case favoriteMovie = "favorite_movie"
+        case phone = "phone"
+        case userLocation = "user_location"
     }
     
     init(from decoder: any Decoder) throws {
@@ -75,6 +100,8 @@ struct DBUser: Codable {
         self.isPremium = try container.decodeIfPresent(Bool.self, forKey: .isPremium)
         self.preferences = try container.decodeIfPresent([String].self, forKey: .preferences)
         self.favoriteMovie = try container.decodeIfPresent(Movie.self, forKey: .favoriteMovie)
+        self.phone = try container.decodeIfPresent(Phone.self, forKey: .phone)
+        self.userLocation = try container.decodeIfPresent(Location.self, forKey: .userLocation)
     }
     func encode(to encoder: any Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
@@ -85,6 +112,8 @@ struct DBUser: Codable {
         try container.encodeIfPresent(self.isPremium, forKey: .isPremium)
         try container.encodeIfPresent(self.preferences, forKey: .preferences)
         try container.encodeIfPresent(self.favoriteMovie, forKey: .favoriteMovie)
+        try container.encodeIfPresent(self.phone, forKey: .phone)
+        try container.encodeIfPresent(self.userLocation, forKey: .userLocation)
     }
     
     
@@ -183,5 +212,39 @@ final class UserManager {
             DBUser.CodingKeys.favoriteMovie.rawValue : nil
         ]
         try await userDocument(userId: userId).updateData(data as [AnyHashable : Any])
+    }
+    
+    func updatePhone(userId: String, phone: Phone) async throws {
+        guard let data = try? encoder.encode(phone) else {
+            throw URLError(.badURL)
+        }
+        let dict: [String : Any] = [
+            DBUser.CodingKeys.phone.rawValue : data
+        ]
+        try await userDocument(userId: userId).updateData(dict)
+    }
+    
+    func removePhone(userId: String) async throws {
+        let data: [String : Any?] = [
+            DBUser.CodingKeys.phone.rawValue : nil
+        ]
+        try await userDocument(userId: userId).updateData(data as [AnyHashable : Any])
+    }
+    
+//    func updatePhone(userId: String, phone: String) async throws {
+//        let data: [String : Any] = [
+//            DBUser.CodingKeys.phone.rawValue : phone
+//        ]
+//        try await userDocument(userId: userId).updateData(data)
+//    }
+    
+    func addLocation(userId: String, userLocation: Location) async throws {
+        guard let data = try? encoder.encode(userLocation) else {
+            throw URLError(.badURL)
+        }
+        let dict: [String : Any] = [
+            DBUser.CodingKeys.userLocation.rawValue : data
+        ]
+        try await userDocument(userId: userId).updateData(dict)
     }
 }

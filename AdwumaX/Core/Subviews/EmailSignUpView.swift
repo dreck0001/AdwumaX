@@ -42,7 +42,7 @@ struct EmailSignUpView: View {
                         .frame(maxWidth: .infinity)
                         .padding()
                         .bold()
-                        .background(RoundedRectangle(cornerRadius: 10).fill(Color.primaryBlueGreen))
+                        .background(RoundedRectangle(cornerRadius: 10).fill(Color.primary1))
                     }
                 }
                 .padding()

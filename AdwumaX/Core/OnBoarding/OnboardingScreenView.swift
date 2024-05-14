@@ -34,7 +34,7 @@ struct OnboardingScreenView: View {
             
             if isLastScreen {
                 Button(action: action) {
-                    Text("Let's get started").button1()
+                    Text("Let's get started").button3()
                 }.padding()
             }
             

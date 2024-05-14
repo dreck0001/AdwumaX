@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OnboardingView: View {
     @Binding var isShowingOnboarding: Bool
-
+    
     var body: some View {
         TabView {
             ForEach(onboardingScreens.indices, id: \.self) { index in
@@ -23,6 +23,15 @@ struct OnboardingView: View {
             }
         }
         .tabViewStyle(PageTabViewStyle())
+        .background(
+            LinearGradient(
+                gradient: Gradient(colors: [Color.clear, Color.primary1]),
+                startPoint: .center,
+                endPoint: .bottom
+            )
+            .frame(maxHeight: .infinity)
+            .edgesIgnoringSafeArea(.all)
+        )
     }
 }
 

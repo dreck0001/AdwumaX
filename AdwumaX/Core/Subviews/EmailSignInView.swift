@@ -16,8 +16,7 @@ struct EmailSignInView: View {
         NavigationView {
             ScrollView {
                 AdwumaXView(text1: "Adwuma", text2: "X", size: Consts.Title.fontSize).padding()
-                Text("Sign in with email.")
-                    .font(.custom("Baskerville", fixedSize: CGFloat(Consts.Icon.fontSize2)))
+                Text("Sign in with email.").textTitle()
                 Spacer()
                 VStack(spacing: 20) {
                     // Email and password fields

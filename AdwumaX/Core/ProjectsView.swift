@@ -34,10 +34,9 @@ struct ProjectsView: View {
                 Text("Post and browse projects")
             }
         }
-        .tabItem { Label(
-            title: { Text("Projects") },
-            icon: { Image(systemName: "wrench.and.screwdriver.fill") }
-        ) }
+        .tabItem {
+            Label("Projects", systemImage: "wrench.and.screwdriver.fill")
+        }
     }
 }
 
