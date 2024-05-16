@@ -67,6 +67,7 @@
 		92111FC32BBBE14D0045638C /* MotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92111F9E2BBBE14D0045638C /* MotoView.swift */; };
 		92111FC42BBBE14D0045638C /* ProductDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92111F9F2BBBE14D0045638C /* ProductDatabase.swift */; };
 		92111FC52BBBE14D0045638C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92111FA02BBBE14D0045638C /* Utilities.swift */; };
+		92162CF52BF3D71A00BEC9CD /* ProfileItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92162CF42BF3D71A00BEC9CD /* ProfileItem.swift */; };
 		924C95572BED5C3B00147A11 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924C95562BED5C3B00147A11 /* Spinner.swift */; };
 		924C95592BEEEF3700147A11 /* NumFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924C95582BEEEF3700147A11 /* NumFormatter.swift */; };
 		927155042BD43E4000EF76F3 /* EditPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927155032BD43E4000EF76F3 /* EditPhoneView.swift */; };
@@ -157,6 +158,7 @@
 		92111F9E2BBBE14D0045638C /* MotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotoView.swift; sourceTree = "<group>"; };
 		92111F9F2BBBE14D0045638C /* ProductDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDatabase.swift; sourceTree = "<group>"; };
 		92111FA02BBBE14D0045638C /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		92162CF42BF3D71A00BEC9CD /* ProfileItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItem.swift; sourceTree = "<group>"; };
 		924C95562BED5C3B00147A11 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		924C95582BEEEF3700147A11 /* NumFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumFormatter.swift; sourceTree = "<group>"; };
 		927155032BD43E4000EF76F3 /* EditPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhoneView.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 			children = (
 				92111F862BBBE14C0045638C /* ProfileView.swift */,
 				920330872BD016A700814F41 /* ProfileVieww.swift */,
+				92162CF42BF3D71A00BEC9CD /* ProfileItem.swift */,
 				9200CDCD2BC79D0600B003B8 /* EditPersonalView.swift */,
 				9203308A2BD309A000814F41 /* EditEmailView.swift */,
 				920DE83A2BD9AFF0003A361F /* Phone */,
@@ -627,6 +630,7 @@
 				92111FC52BBBE14D0045638C /* Utilities.swift in Sources */,
 				927155082BD5CF1E00EF76F3 /* FormValidator.swift in Sources */,
 				92111FA72BBBE14D0045638C /* SettingsViewModel.swift in Sources */,
+				92162CF52BF3D71A00BEC9CD /* ProfileItem.swift in Sources */,
 				92111FC02BBBE14D0045638C /* BorderedTextField.swift in Sources */,
 				92111FB82BBBE14D0045638C /* SignInWithGoogleHelper_NotUsed.swift in Sources */,
 				92111FAA2BBBE14D0045638C /* EmailSignUpView.swift in Sources */,

@@ -32,20 +32,8 @@ struct EditEmailView: View {
                     viewModel.onSave()
                     presentationMode.wrappedValue.dismiss()
                 }.button1()
-                    .padding()
-                
-            }
-            //            .toolbar {
-            //                ToolbarItem(placement: .topBarLeading) {
-            //                    Button(
-            //                        action: { print("Closing EditEmailView...") },
-            //                        label: { Image(systemName: "xmark") }
-            //                    )
-            //                }
-            //            }
-            
+            }.padding()
         }
-        .tabItem { Label("Email", systemImage: "pencil") }
     }
 }
 

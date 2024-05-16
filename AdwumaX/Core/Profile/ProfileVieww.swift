@@ -15,7 +15,7 @@ final class ProfilViewwModel: ObservableObject {
     @Published var countryFlag : String = "🇬🇭"
     @Published var countryPattern : String = "### ### ####"
     @Published var countryLimit : Int = 5
-        
+    
     @Published private(set) var user: DBUser? = nil
     func loadCUrrentUser() async throws {
         let authDataResult = try AuthenticationManager.shared.getAuthenticatedUser()
@@ -104,67 +104,46 @@ struct ProfileVieww: View {
                         Text("Active since - \(profile.getFormattedDate(with: 1))")
                             .font(.subheadline)
                             .foregroundStyle(.secondary)
-                        
                         Spacer()
-                        
-                        
-                        
                         VStack(alignment: .leading, spacing: 10) {
                             HStack {
                                 Text(ProfileSection.personal.rawValue)
                                     .font(.headline)
                                     .padding(.vertical)
                                 Spacer()
-                                //                                Button(
-                                //                                    action: {
-                                //                                        isShowingEditPersonalView = true
-                                //                                    },
-                                //                                    label: {
-                                //                                        Label("Edit", systemImage: "highlighter")
-                                //                                    })
-                                //                                .fullScreenCover(isPresented: $isShowingEditPersonalView, content: {
-                                //                                    EditPersonalView(isPresented: $isShowingEditPersonalView, viewModel: viewModel)
-                                //                                })
                             }
                             if let user = viewModel.user {
                                 if viewModel.authProviders.contains(.email) {
                                     NavigationLink(destination: EditEmailView()) {
-                                        HStack {
-                                            Image(systemName: "envelope").foregroundColor(.blue)
-                                            Text("Email")
-                                            Spacer()
-                                            Text(user.email ?? "").foregroundColor(.gray)
-                                            Image(systemName: "chevron.right").foregroundColor(.gray)
-                                        }
+                                        ProfileItem(image: "envelope", title: "Email", preview: user.email ?? "", rightIcon: "chevron.right")
                                     }
                                 } else {
-                                    HStack {
-                                        Image(systemName: "envelope").foregroundColor(.blue)
-                                        Text("Insert google/apple image")
-                                        Spacer()
-                                        Text(user.email ?? "").foregroundColor(.gray)
-                                    }
+                                    ProfileItem(image: "envelope", title: "Insert google/apple image", preview: user.email ?? "", rightIcon: "")
                                 }
                                 Divider()
                                 
                                 NavigationLink(destination: EditPhoneView(viewModel: ProfilViewwModel())) {
-                                    HStack {
-                                        Image(systemName: "phone").foregroundColor(.blue)
-                                        Text("Phone")
-                                        Spacer()
-                                        Text(user.phone?.countryCode ?? "").foregroundColor(.gray)
-                                        Text(user.phone?.number ?? "").foregroundColor(.gray)
-                                        Image(systemName: "chevron.right").foregroundColor(.gray)
-                                    }
+                                    ProfileItem(image: "phone", title: "Phone", preview: (user.phone?.countryCode ?? "") + " " + (user.phone?.number ?? ""), rightIcon: "chevron.right")
+//                                    HStack {
+//                                        Image(systemName: "phone").foregroundColor(.blue)
+//                                        Text("Phone")
+//                                        Spacer()
+//                                        Text(user.phone?.countryCode ?? "").foregroundColor(.gray)
+//                                        Text(user.phone?.number ?? "").foregroundColor(.gray)
+//                                        Image(systemName: "chevron.right").foregroundColor(.gray)
+//                                    }
                                 }
                                 Divider()
-                                HStack {
-                                    Image(systemName: "location").foregroundColor(.blue)
-                                    Text("Location")
-                                    Spacer()
-                                    Text(user.userLocation?.location ?? "").foregroundColor(.gray)
-                                    Image(systemName: "chevron.right").foregroundColor(.gray)
+                                NavigationLink(destination: AnyView(Text("Location Details"))) {
+                                    ProfileItem(image: "location", title: "Location", preview: user.userLocation?.location ?? "", rightIcon: "chevron.right")
                                 }
+//                                HStack {
+//                                    Image(systemName: "location").foregroundColor(.blue)
+//                                    Text("Location")
+//                                    Spacer()
+//                                    Text(user.userLocation?.location ?? "").foregroundColor(.gray)
+//                                    Image(systemName: "chevron.right").foregroundColor(.gray)
+//                                }
                                 Divider()
                             }
                             
@@ -185,16 +164,18 @@ struct ProfileVieww: View {
                                     }
                                 }
                                 Divider()
-                            }                     }
+                            }
+                            
+                            Text(ProfileSection.app.rawValue)
+                                .font(.headline)
+                                .padding(.vertical)
+                        }
                         .padding()
                         Spacer()
-                        
                     }
                     .padding()
                     .offset(y: 75)
-                    
                 }
-                
             }
             .ignoresSafeArea()
             .navigationTitle("Profile")
@@ -272,6 +253,5 @@ struct SecondSectionItem {
 enum ProfileSection: String {
     case personal = "Personal Information"
     case general = "General"
+    case app = "App Information"
 }
-
-
