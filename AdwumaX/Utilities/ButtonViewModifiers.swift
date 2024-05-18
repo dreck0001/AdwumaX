@@ -12,9 +12,11 @@ struct ButtonViewModifiers: View {
         Text("button1").button1()
         Text("button2").button2()
         Text("button3").button3()
-        Text("buttonDisable").button1().buttonDisable()
-        Text("buttonDisable").button2().buttonDisable()
-        Text("buttonDisable").button3().buttonDisable()
+        Text("button4").button4()
+        Text("buttonDisable1").button1().buttonDisable()
+        Text("buttonDisable2").button2().buttonDisable()
+        Text("buttonDisable3").button3().buttonDisable()
+        Text("buttonDisable4").button4().buttonDisable()
 
     }
 }
@@ -51,6 +53,7 @@ struct Button2: ViewModifier {
                 )
             )
     }
+    
 }
 struct Button3: ViewModifier {
     @Environment(\.colorScheme) var colorScheme
@@ -65,6 +68,26 @@ struct Button3: ViewModifier {
                 .fill(Color.primary1))
     }
 }
+
+struct Button4: ViewModifier {
+    @Environment(\.colorScheme) var colorScheme
+    
+    func body(content: Content) -> some View {
+        content
+            .foregroundColor(Color.primary1)
+            .frame(maxWidth: .infinity, maxHeight: maxHeight)
+            .padding()
+            .bold()
+            .background(RoundedRectangle(cornerRadius: radius)
+                .fill(colorScheme == .dark ? .black : .white)
+                .overlay(
+                    RoundedRectangle(cornerRadius: radius)
+                        .stroke(Color.primary1, lineWidth: 2)
+                )
+            )
+    }
+}
+    
 struct ButtonDisable: ViewModifier {
     let status: Bool
     func body(content: Content) -> some View {
@@ -98,6 +121,9 @@ extension View {
     }
     public func button3() -> some View {
         modifier(Button3())
+    }
+    public func button4() -> some View {
+        modifier(Button4())
     }
     public func buttonDisable(status: Bool = true) -> some View {
         self.modifier(status ? ButtonDisable(status: true) : ButtonDisable(status: false))

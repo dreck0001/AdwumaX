@@ -16,8 +16,8 @@ struct ProfileItem: View {
     
     var body: some View {
         HStack {
-            Image(systemName: image).foregroundColor(.blue)
-            Text(title)
+            Image(systemName: image).foregroundColor(.gray)
+            Text(title).foregroundStyle(.primary)
             Spacer()
             Text(preview).foregroundColor(.gray)
             Image(systemName: rightIcon).foregroundColor(.gray)

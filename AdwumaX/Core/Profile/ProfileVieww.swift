@@ -48,6 +48,9 @@ final class ProfilViewwModel: ObservableObject {
         
         return true
     }
+    func signOut() throws{
+        try AuthenticationManager.shared.signOut()
+    }
 }
 
 struct ProfileVieww: View {
@@ -57,22 +60,74 @@ struct ProfileVieww: View {
     //    @StateObject private var viewModel = ProfilViewwModel()
     @ObservedObject var viewModel: ProfilViewwModel
     
-    
-    private func getGeneralDestinationView(for title: String) -> AnyView {
+    private func getDestinationView(for title: String) -> AnyView {
         switch title {
         case "Settings":
             return AnyView(SettingsView(showSignInOptions: $showSignInOptions))
         case "About":
             return AnyView(Text("About Details"))
+        case "My Services":
+            return AnyView(Text("My Services Details"))
+        case "Service Requests":
+            return AnyView(Text("Service Requests Details"))
+        case "Service History":
+            return AnyView(Text("Service History Details"))
+        case "Service Reviews":
+            return AnyView(Text("Service Reviews Details"))
+        case "Favorite Services":
+            return AnyView(Text("Favorite Services Details"))
+        case "Availability":
+            return AnyView(Text("Availability Details"))
+        case "Pricing Plans":
+            return AnyView(Text("Pricing Plans Details"))
+        case "Analytics":
+            return AnyView(Text("Analytics Details"))
+        case "Version":
+            return AnyView(Text("App Version Details"))
+        case "FAQ":
+            return AnyView(Text("FAQ Details"))
+        case "Privacy Policy":
+            return AnyView(Text("Privacy Policy Details"))
+        case "Terms of Service":
+            return AnyView(Text("Terms of Service Details"))
+        case "Community Guidelines":
+            return AnyView(Text("Community Guidelines Details"))
+        case "Legal":
+            return AnyView(Text("Legal Details"))
+        case "Contact Support":
+            return AnyView(Text("Contact Support Details"))
+        case "Rate Us":
+            return AnyView(Text("Rate Us Details"))
         default:
             // Fallback view if no match is found
             return AnyView(Text("Detail for \(title)"))
         }
     }
+    
     // Sample data for the second section
-    let secondSectionItems: [SecondSectionItem] = [
-        SecondSectionItem(icon: "gear", title: "Settings"),
-        SecondSectionItem(icon: "info.circle", title: "About")
+    let generalSectionItems: [ProfileItem] = [
+        ProfileItem(image: "gear", title: "Settings", preview: "", rightIcon: "chevron.right"),
+        ProfileItem(image: "info.circle", title: "About", preview: "", rightIcon: "chevron.right")
+    ]
+    let servicesSectionItems: [ProfileItem] = [
+        ProfileItem(image: "briefcase", title: "My Services", preview: "", rightIcon: "chevron.right"),
+        ProfileItem(image: "tray", title: "Service Requests", preview: "", rightIcon: "chevron.right"),
+        ProfileItem(image: "clock.arrow.circlepath", title: "Service History", preview: "", rightIcon: "chevron.right"),
+        ProfileItem(image: "star", title: "Service Reviews", preview: "", rightIcon: "chevron.right"),
+        ProfileItem(image: "heart", title: "Favorite Services", preview: "", rightIcon: "chevron.right"),
+        ProfileItem(image: "calendar", title: "Availability", preview: "", rightIcon: "chevron.right"),
+        ProfileItem(image: "dollarsign.circle", title: "Pricing Plans", preview: "", rightIcon: "chevron.right"),
+        ProfileItem(image: "chart.bar", title: "Analytics", preview: "", rightIcon: "chevron.right")
+    ]
+    let appInformationSectionItems: [ProfileItem] = [
+        ProfileItem(image: "doc.plaintext", title: "Version", preview: "1.0.0", rightIcon: ""),
+        ProfileItem(image: "questionmark.circle", title: "FAQ", preview: "", rightIcon: "chevron.right"),
+        ProfileItem(image: "lock.shield", title: "Privacy Policy", preview: "", rightIcon: "chevron.right"),
+        ProfileItem(image: "doc.text.magnifyingglass", title: "Terms of Service", preview: "", rightIcon: "chevron.right"),
+        ProfileItem(image: "hand.raised.fill", title: "Community Guidelines", preview: "", rightIcon: "chevron.right"),
+        ProfileItem(image: "hammer", title: "Legal", preview: "", rightIcon: "chevron.right"),
+        ProfileItem(image: "envelope", title: "Contact Support", preview: "", rightIcon: "chevron.right"),
+        ProfileItem(image: "star.bubble", title: "Rate Us", preview: "", rightIcon: "chevron.right")
     ]
     
     let profile: Profile = .standard
@@ -124,26 +179,12 @@ struct ProfileVieww: View {
                                 
                                 NavigationLink(destination: EditPhoneView(viewModel: ProfilViewwModel())) {
                                     ProfileItem(image: "phone", title: "Phone", preview: (user.phone?.countryCode ?? "") + " " + (user.phone?.number ?? ""), rightIcon: "chevron.right")
-//                                    HStack {
-//                                        Image(systemName: "phone").foregroundColor(.blue)
-//                                        Text("Phone")
-//                                        Spacer()
-//                                        Text(user.phone?.countryCode ?? "").foregroundColor(.gray)
-//                                        Text(user.phone?.number ?? "").foregroundColor(.gray)
-//                                        Image(systemName: "chevron.right").foregroundColor(.gray)
-//                                    }
                                 }
                                 Divider()
                                 NavigationLink(destination: AnyView(Text("Location Details"))) {
                                     ProfileItem(image: "location", title: "Location", preview: user.userLocation?.location ?? "", rightIcon: "chevron.right")
                                 }
-//                                HStack {
-//                                    Image(systemName: "location").foregroundColor(.blue)
-//                                    Text("Location")
-//                                    Spacer()
-//                                    Text(user.userLocation?.location ?? "").foregroundColor(.gray)
-//                                    Image(systemName: "chevron.right").foregroundColor(.gray)
-//                                }
+                                
                                 Divider()
                             }
                             
@@ -151,24 +192,45 @@ struct ProfileVieww: View {
                                 .font(.headline)
                                 .padding(.vertical)
                             
-                            ForEach(secondSectionItems, id: \.title) { item in
-                                NavigationLink(destination: getGeneralDestinationView(for: item.title))
+                            ForEach(generalSectionItems, id: \.title) { item in
+                                NavigationLink(destination: getDestinationView(for: item.title))
                                 {
-                                    HStack {
-                                        Image(systemName: item.icon)
-                                            .foregroundColor(.green)
-                                        Text(item.title)
-                                        Spacer()
-                                        Image(systemName: "chevron.right")
-                                            .foregroundColor(.gray)
-                                    }
+                                    ProfileItem(image: item.image, title: item.title, preview: item.preview, rightIcon:item.rightIcon)
                                 }
                                 Divider()
                             }
-                            
+                            Text(ProfileSection.services.rawValue)
+                                .font(.headline)
+                                .padding(.vertical)
+                            ForEach(servicesSectionItems, id: \.title) { item in
+                                NavigationLink(destination: getDestinationView(for: item.title))
+                                {
+                                    ProfileItem(image: item.image, title: item.title, preview: item.preview, rightIcon:item.rightIcon)
+                                }
+                                Divider()
+                            }
                             Text(ProfileSection.app.rawValue)
                                 .font(.headline)
                                 .padding(.vertical)
+                            ForEach(appInformationSectionItems, id: \.title) { item in
+                                NavigationLink(destination: getDestinationView(for: item.title))
+                                {
+                                    ProfileItem(image: item.image, title: item.title, preview: item.preview, rightIcon:item.rightIcon)
+                                }
+                                Divider()
+                            }
+                            Button("Log out") {
+                                Task {
+                                    do {
+                                        try viewModel.signOut()
+                                        showSignInOptions = true
+                                    } catch {
+                                        print(error)
+                                    }
+                                }
+                            }.button4()
+                            .padding(.top)
+                            Spacer()
                         }
                         .padding()
                         Spacer()
@@ -253,5 +315,6 @@ struct SecondSectionItem {
 enum ProfileSection: String {
     case personal = "Personal Information"
     case general = "General"
+    case services = "Services"
     case app = "App Information"
 }
